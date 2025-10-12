@@ -3,41 +3,141 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sean Hazelton</title>
+  <title>Sean Hazelton | Portfolio</title>
   <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
     body {
-      font-family: Arial, sans-serif;
-      background: linear-gradient(to right, #101820, #2a2a72);
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(135deg, #0a0a0f, #151523);
       color: #fff;
+      overflow-x: hidden;
+    }
+
+    header {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
       text-align: center;
-      padding: 100px 20px;
+      position: relative;
     }
+
     h1 {
-      font-size: 3rem;
-      margin-bottom: 10px;
+      font-size: 3.5rem;
+      font-weight: 700;
+      background: linear-gradient(90deg, #00d2ff, #3a47d5);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: fadeIn 1s ease-in-out;
     }
+
     p {
       font-size: 1.2rem;
       color: #ccc;
+      margin-top: 10px;
     }
-    a {
-      color: #00bcd4;
-      text-decoration: none;
-      border: 1px solid #00bcd4;
-      padding: 10px 20px;
-      border-radius: 25px;
+
+    a.button {
+      margin-top: 25px;
       display: inline-block;
-      margin-top: 20px;
+      padding: 12px 28px;
+      border-radius: 30px;
+      background: linear-gradient(90deg, #00d2ff, #3a47d5);
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      transition: transform 0.3s ease;
     }
-    a:hover {
-      background: #00bcd4;
-      color: #000;
+
+    a.button:hover { transform: scale(1.05); }
+
+    section {
+      max-width: 900px;
+      margin: 80px auto;
+      padding: 0 20px;
+    }
+
+    section h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      text-align: center;
+      background: linear-gradient(90deg, #00d2ff, #3a47d5);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+    }
+
+    .card {
+      background: rgba(255,255,255,0.05);
+      padding: 25px;
+      border-radius: 15px;
+      transition: all 0.3s ease;
+    }
+
+    .card:hover {
+      background: rgba(255,255,255,0.1);
+      transform: translateY(-5px);
+    }
+
+    footer {
+      text-align: center;
+      padding: 50px 0;
+      color: #888;
+      font-size: 0.9rem;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 600px) {
+      h1 { font-size: 2.4rem; }
     }
   </style>
 </head>
 <body>
-  <h1>Sean Hazelton</h1>
-  <p>Entrepreneur | Creator | Builder</p>
-  <a href="mailto:contact@seanhazelton.com">Contact Me</a>
+  <header>
+    <h1>Sean Hazelton</h1>
+    <p>Entrepreneur • Creator • Builder</p>
+    <a href="mailto:contact@seanhazelton.com" class="button">Get in Touch</a>
+  </header>
+
+  <section id="about">
+    <h2>About</h2>
+    <p>
+      I’m Sean Hazelton — a creator focused on building meaningful products, simple digital experiences, 
+      and high-impact ventures. I believe in combining design, technology, and strategy to create things that matter.
+    </p>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="projects">
+      <div class="card">
+        <h3>Project One</h3>
+        <p>A brief description of your first project. You can link to a live demo or GitHub repo.</p>
+      </div>
+      <div class="card">
+        <h3>Project Two</h3>
+        <p>Highlight another interesting product or idea you’ve built or contributed to.</p>
+      </div>
+      <div class="card">
+        <h3>Project Three</h3>
+        <p>Keep it short, focused, and impressive — just enough to get visitors curious.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    © 2025 Sean Hazelton — Built with 💡 and hosted on GitHub Pages.
+  </footer>
 </body>
 </html>
