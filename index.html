@@ -5,70 +5,71 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Sean Hazelton</title>
   <style>
-    /* Reset */
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    html, body { height: 100%; width: 100%; }
-
     body {
       font-family: -apple-system, BlinkMacSystemFont, "Inter", "Helvetica Neue", sans-serif;
-      background: #ffffff;
+      background: #fff;
       color: #000;
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: center;
-      text-align: center;
-      height: 100vh;
-      overflow: hidden;
-      transition: all 0.5s ease;
+      justify-content: flex-start;
+      min-height: 100vh;
+      padding: 80px 20px 60px;
+      line-height: 1.6;
+      overflow-x: hidden;
     }
 
-    h1 {
-      font-size: clamp(2.5rem, 6vw, 5rem);
+    header {
+      width: 100%;
+      max-width: 800px;
+      text-align: left;
+      margin-bottom: 60px;
+      opacity: 0;
+      animation: fadeDown 1s ease forwards;
+    }
+
+    header h1 {
+      font-size: clamp(2rem, 4vw, 3rem);
       font-weight: 600;
-      letter-spacing: -0.03em;
-      opacity: 0;
-      animation: fadeUp 1s ease forwards;
+      letter-spacing: -0.02em;
     }
 
-    p {
+    main {
+      max-width: 800px;
+      width: 100%;
+      text-align: left;
+      opacity: 0;
+      animation: fadeUp 1s ease forwards;
+      animation-delay: 0.3s;
+    }
+
+    main p {
       font-size: 1.1rem;
-      margin-top: 12px;
-      color: #333;
-      opacity: 0;
-      animation: fadeUp 1s ease forwards;
-      animation-delay: 0.4s;
+      color: #222;
+      margin-bottom: 1.2rem;
     }
 
-    a {
-      display: inline-block;
-      margin-top: 30px;
-      font-size: 1rem;
-      text-decoration: none;
-      color: #000;
-      border: 1px solid #000;
-      border-radius: 999px;
-      padding: 10px 22px;
-      transition: all 0.3s ease;
+    footer {
+      margin-top: auto;
+      padding-top: 40px;
+      text-align: left;
+      width: 100%;
+      max-width: 800px;
       opacity: 0;
       animation: fadeUp 1s ease forwards;
       animation-delay: 0.8s;
     }
 
-    a:hover {
-      background: #000;
-      color: #fff;
-      transform: scale(1.03);
+    footer a {
+      color: #000;
+      text-decoration: none;
+      border-bottom: 1px solid #000;
+      transition: all 0.3s ease;
     }
 
-    footer {
-      position: absolute;
-      bottom: 30px;
-      font-size: 0.9rem;
-      color: #777;
-      opacity: 0;
-      animation: fadeIn 2s ease forwards;
-      animation-delay: 1.2s;
+    footer a:hover {
+      opacity: 0.7;
     }
 
     @keyframes fadeUp {
@@ -76,21 +77,25 @@
       to { opacity: 1; transform: translateY(0); }
     }
 
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
+    @keyframes fadeDown {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
     }
   </style>
 </head>
 <body>
-  <main>
+  <header>
     <h1>Sean Hazelton</h1>
-    <p>Entrepreneur • Creator • Builder</p>
-    <a href="mailto:contact@seanhazelton.com">Get in Touch</a>
+  </header>
+
+  <main>
+    <p>Founder of <strong>Perrin Hazelton LLC</strong>.</p>
+    <p>Achieved a seven-figure real estate valuation through strategic acquisitions and property development.</p>
+    <p>Focused on growth, precision, and long-term value creation.</p>
   </main>
 
   <footer>
-    © 2025 Sean Hazelton — Built with 💡 and hosted on GitHub Pages
+    <a href="https://www.linkedin.com/in/seanphazelton" target="_blank" rel="noopener noreferrer">LinkedIn</a>
   </footer>
 </body>
 </html>
