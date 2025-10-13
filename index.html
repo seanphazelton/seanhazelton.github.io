@@ -3,14 +3,18 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sean Hazelton | Portfolio</title>
+  <title>Sean Hazelton | Creator & Builder</title>
   <style>
+    /* Base Reset */
     * { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { height: 100%; scroll-behavior: smooth; }
 
     body {
       font-family: 'Inter', sans-serif;
-      background: linear-gradient(135deg, #0a0a0f, #151523);
-      color: #fff;
+      background: linear-gradient(-45deg, #f0f4ff, #e8f3ff, #e6f7f8, #f3f6ff);
+      background-size: 400% 400%;
+      animation: gradientMove 15s ease infinite;
+      color: #111;
       overflow-x: hidden;
     }
 
@@ -22,50 +26,63 @@
       justify-content: center;
       text-align: center;
       position: relative;
+      z-index: 1;
     }
 
     h1 {
       font-size: 3.5rem;
-      font-weight: 700;
-      background: linear-gradient(90deg, #00d2ff, #3a47d5);
+      background: linear-gradient(90deg, #0077ff, #00c4ff);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-      animation: fadeIn 1s ease-in-out;
+      margin-bottom: 10px;
+      animation: fadeIn 1.2s ease-in-out;
     }
 
     p {
       font-size: 1.2rem;
-      color: #ccc;
-      margin-top: 10px;
+      color: #444;
+      animation: fadeIn 2s ease-in-out;
     }
 
     a.button {
-      margin-top: 25px;
+      margin-top: 30px;
       display: inline-block;
       padding: 12px 28px;
       border-radius: 30px;
-      background: linear-gradient(90deg, #00d2ff, #3a47d5);
+      background: linear-gradient(90deg, #0077ff, #00c4ff);
       color: white;
       text-decoration: none;
       font-weight: 500;
-      transition: transform 0.3s ease;
+      transition: transform 0.3s ease, opacity 0.3s ease;
+      opacity: 0.9;
     }
 
-    a.button:hover { transform: scale(1.05); }
+    a.button:hover {
+      transform: scale(1.05);
+      opacity: 1;
+    }
 
     section {
       max-width: 900px;
       margin: 80px auto;
       padding: 0 20px;
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.7s ease-out;
+    }
+
+    section.visible {
+      opacity: 1;
+      transform: translateY(0);
     }
 
     section h2 {
-      font-size: 2rem;
-      margin-bottom: 20px;
       text-align: center;
-      background: linear-gradient(90deg, #00d2ff, #3a47d5);
+      font-size: 2rem;
+      background: linear-gradient(90deg, #0077ff, #00c4ff);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
+      margin-bottom: 20px;
     }
 
     .projects {
@@ -75,22 +92,30 @@
     }
 
     .card {
-      background: rgba(255,255,255,0.05);
+      background: rgba(255, 255, 255, 0.7);
+      backdrop-filter: blur(8px);
       padding: 25px;
       border-radius: 15px;
-      transition: all 0.3s ease;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
     .card:hover {
-      background: rgba(255,255,255,0.1);
       transform: translateY(-5px);
+      box-shadow: 0 8px 25px rgba(0,0,0,0.08);
     }
 
     footer {
       text-align: center;
       padding: 50px 0;
-      color: #888;
+      color: #777;
       font-size: 0.9rem;
+    }
+
+    @keyframes gradientMove {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
     }
 
     @keyframes fadeIn {
@@ -113,8 +138,8 @@
   <section id="about">
     <h2>About</h2>
     <p>
-      I’m Sean Hazelton — a creator focused on building meaningful products, simple digital experiences, 
-      and high-impact ventures. I believe in combining design, technology, and strategy to create things that matter.
+      I'm Sean Hazelton — a creator passionate about building digital products that combine simplicity, utility, and impact. 
+      I work at the intersection of design, strategy, and innovation to bring ideas to life.
     </p>
   </section>
 
@@ -123,15 +148,15 @@
     <div class="projects">
       <div class="card">
         <h3>Project One</h3>
-        <p>A brief description of your first project. You can link to a live demo or GitHub repo.</p>
+        <p>A quick overview of your first project. Link to a live demo or GitHub repo.</p>
       </div>
       <div class="card">
         <h3>Project Two</h3>
-        <p>Highlight another interesting product or idea you’ve built or contributed to.</p>
+        <p>Highlight a meaningful product or tool you’ve helped build or designed.</p>
       </div>
       <div class="card">
         <h3>Project Three</h3>
-        <p>Keep it short, focused, and impressive — just enough to get visitors curious.</p>
+        <p>Show off something unique — it could be a prototype, idea, or concept you love.</p>
       </div>
     </div>
   </section>
@@ -139,5 +164,18 @@
   <footer>
     © 2025 Sean Hazelton — Built with 💡 and hosted on GitHub Pages.
   </footer>
+
+  <script>
+    // Scroll animation reveal
+    const sections = document.querySelectorAll('section');
+    const reveal = () => {
+      sections.forEach(sec => {
+        const top = sec.getBoundingClientRect().top;
+        if (top < window.innerHeight - 100) sec.classList.add('visible');
+      });
+    };
+    window.addEventListener('scroll', reveal);
+    reveal();
+  </script>
 </body>
 </html>
