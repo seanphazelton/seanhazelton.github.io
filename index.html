@@ -6,6 +6,7 @@
   <title>Sean Hazelton</title>
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
+
     body {
       font-family: -apple-system, BlinkMacSystemFont, "Inter", "Helvetica Neue", sans-serif;
       background: #fff;
@@ -17,7 +18,6 @@
       min-height: 100vh;
       padding: 80px 20px 60px;
       line-height: 1.6;
-      overflow-x: hidden;
     }
 
     header {
@@ -25,8 +25,6 @@
       max-width: 800px;
       text-align: left;
       margin-bottom: 60px;
-      opacity: 0;
-      animation: fadeDown 1s ease forwards;
     }
 
     header h1 {
@@ -39,9 +37,6 @@
       max-width: 800px;
       width: 100%;
       text-align: left;
-      opacity: 0;
-      animation: fadeUp 1s ease forwards;
-      animation-delay: 0.3s;
     }
 
     main p {
@@ -56,30 +51,24 @@
       text-align: left;
       width: 100%;
       max-width: 800px;
-      opacity: 0;
-      animation: fadeUp 1s ease forwards;
-      animation-delay: 0.8s;
+      font-size: 0.95rem;
+      color: #333;
     }
 
     footer a {
       color: #000;
       text-decoration: none;
-      border-bottom: 1px solid #000;
-      transition: all 0.3s ease;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.2s ease;
     }
 
     footer a:hover {
-      opacity: 0.7;
+      border-color: #000;
     }
 
-    @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    @keyframes fadeDown {
-      from { opacity: 0; transform: translateY(-20px); }
-      to { opacity: 1; transform: translateY(0); }
+    footer span {
+      margin: 0 8px;
+      color: #999;
     }
   </style>
 </head>
@@ -90,12 +79,17 @@
 
   <main>
     <p>Founder of <strong>Perrin Hazelton LLC</strong>.</p>
+    <p>Founding Account Executive of <strong>Build AI</strong>.</p>
     <p>Achieved a seven-figure real estate valuation through strategic acquisitions and property development.</p>
     <p>Focused on growth, precision, and long-term value creation.</p>
   </main>
 
   <footer>
     <a href="https://www.linkedin.com/in/seanphazelton" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+    <span>|</span>
+    <a href="mailto:seanperrinhazelton@gmail.com">seanperrinhazelton@gmail.com</a>
+    <span>|</span>
+    <a href="mailto:sean@build.ai">sean@build.ai</a>
   </footer>
 </body>
 </html>
