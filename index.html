@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Sean Hazelton</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600&display=swap" rel="stylesheet">
   <style>
     * {
       margin: 0;
@@ -12,7 +13,7 @@
     }
 
     body {
-      font-family: "Times New Roman", Times, serif;
+      font-family: 'Inter Tight', -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
       background: #ffffff;
       color: #000;
       line-height: 1.7;
@@ -34,14 +35,13 @@
 
     h1 {
       font-size: clamp(2rem, 4vw, 3.2rem);
-      font-weight: bold;
+      font-weight: 600;
       letter-spacing: -0.02em;
       margin-bottom: 30px;
     }
 
     p {
       margin-bottom: 1.4rem;
-      font-weight: normal;
     }
 
     .bio {
@@ -53,9 +53,9 @@
       margin-bottom: 60px;
     }
 
+    /* tighter relationship between main lines and subpoints */
     .section > p:first-child {
       margin-bottom: 0.4rem;
-      font-weight: bold;
     }
 
     .subpoint {
@@ -63,7 +63,7 @@
       color: #333;
       margin-top: 0.1rem;
       margin-bottom: 0.2rem;
-      font-weight: normal;
+      font-weight: 400;
     }
 
     footer {
@@ -96,28 +96,26 @@
 <body>
   <main>
     <h1>Sean Hazelton</h1>
-    <p class="bio">
-      Focused on growth, precision, and long-term value creation. Looking for bank and investor introductions; email is attached below.
-    </p>
+    <p class="bio">Focused on growth, precision, and long-term value creation.</p>
 
     <div class="section">
-      <p>Owner of Perrin Hazelton Equity, LLC</p>
+      <p>Owner of <strong>Perrin Hazelton LLC</strong></p>
       <p class="subpoint">• Achieved a seven-figure real estate valuation in single and multi-family units</p>
-      <p class="subpoint">• Angel invested in Trubug</p>
+      <p class="subpoint">• Angel invested in <strong>Trubug</strong></p>
     </div>
 
     <div class="section">
-      <p>Dominated residential solar panels with $4.3 million of revenue in 2024 at Nivo Solar (Spartan Solar)</p>
+      <p>Dominated residential solar panels in 2024 with $4.3 million in revenue at <strong>Nivo Solar</strong></p>
       <p class="subpoint">• Consulting and training on YouTube with over 47k views</p>
     </div>
 
     <div class="section">
-      <p>Then, I shut down my sales agency to become the–</p>
+      <p>Then, I shut down my sales agency to become–</p>
     </div>
 
     <div class="section">
-      <p>Founding Account Executive at Build AI</p>
-      <p class="subpoint">• Forming the largest human dataset to train robots with the biggest physical intelligence labs</p>
+      <p>Founding Account Executive of <strong>Build AI</strong></p>
+      <p class="subpoint">• We believe robots can learn from humans</p>
     </div>
   </main>
 
