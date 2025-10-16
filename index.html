@@ -4,89 +4,69 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Sean Hazelton</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@600;700;800&display=swap" rel="stylesheet">
   <style>
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
-
+    html, body {
+      height: 100%;
+      overflow: hidden; /* non-scrollable */
+    }
     body {
       font-family: 'Inter Tight', -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
       background: #ffffff;
       color: #000;
-      line-height: 1.7;
-      font-size: 1.05rem;
-      -webkit-font-smoothing: antialiased;
       display: flex;
-      flex-direction: column;
       align-items: center;
       justify-content: flex-start;
-      min-height: 100vh;
-      padding: 80px 24px 60px;
+      padding: 0 24px;
     }
-
-    main {
-      width: 100%;
+    .container {
       max-width: 760px;
+      width: 100%;
       text-align: left;
     }
-
     h1 {
-      font-size: clamp(2rem, 4vw, 3.2rem);
-      font-weight: 600;
-      letter-spacing: -0.02em;
-      margin-bottom: 30px;
+      font-size: clamp(2.4rem, 5vw, 3.6rem);
+      font-weight: 800;
+      margin-bottom: 20px;
+      line-height: 1.1;
     }
-
-    p {
-      margin-bottom: 1.4rem;
-    }
-
     .bio {
-      margin-bottom: 70px;
-      color: #222;
+      font-weight: 600;
+      margin-bottom: 50px;
     }
-
     .section {
-      margin-bottom: 60px;
+      margin-bottom: 35px;
     }
-
-    /* tighter relationship between main lines and subpoints */
     .section > p:first-child {
-      margin-bottom: 0.4rem;
+      margin-bottom: 4px; /* very tight spacing to subpoints */
     }
-
     .subpoint {
-      margin-left: 26px;
+      margin-left: 24px;
+      font-weight: 600;
+      margin-top: 0;
+      margin-bottom: 4px;
       color: #333;
-      margin-top: 0.1rem;
-      margin-bottom: 0.2rem;
-      font-weight: 400;
     }
-
     footer {
-      margin-top: auto;
-      padding-top: 70px;
-      width: 100%;
-      max-width: 760px;
-      text-align: left;
+      margin-top: 10px;
+      font-weight: 600;
       font-size: 0.95rem;
       color: #333;
     }
-
     footer a {
       color: #000;
       text-decoration: none;
       border-bottom: 1px solid transparent;
       transition: border-color 0.2s ease;
     }
-
     footer a:hover {
       border-color: #000;
     }
-
     footer span {
       margin: 0 10px;
       color: #999;
@@ -94,9 +74,9 @@
   </style>
 </head>
 <body>
-  <main>
+  <div class="container">
     <h1>Sean Hazelton</h1>
-    <p class="bio">Focused on growth, precision, and long-term value creation.</p>
+    <p class="bio">Focused on growth, precision, and long-term value creation</p>
 
     <div class="section">
       <p>Owner of <strong>Perrin Hazelton LLC</strong></p>
@@ -117,14 +97,14 @@
       <p>Founding Account Executive of <strong>Build AI</strong></p>
       <p class="subpoint">• We believe robots can learn from humans</p>
     </div>
-  </main>
 
-  <footer>
-    <a href="https://www.linkedin.com/in/seanphazelton" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-    <span>|</span>
-    <a href="mailto:seanperrinhazelton@gmail.com">seanperrinhazelton@gmail.com</a>
-    <span>|</span>
-    <a href="mailto:sean@build.ai">sean@build.ai</a>
-  </footer>
+    <footer>
+      <a href="https://www.linkedin.com/in/seanphazelton" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      <span>|</span>
+      <a href="mailto:seanperrinhazelton@gmail.com">seanperrinhazelton@gmail.com</a>
+      <span>|</span>
+      <a href="mailto:sean@build.ai">sean@build.ai</a>
+    </footer>
+  </div>
 </body>
 </html>
