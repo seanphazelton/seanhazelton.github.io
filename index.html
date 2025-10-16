@@ -17,7 +17,7 @@
       justify-content: flex-start;
       min-height: 100vh;
       padding: 80px 20px 60px;
-      line-height: 1.6;
+      line-height: 1.7;
     }
 
     header {
@@ -39,10 +39,19 @@
       text-align: left;
     }
 
+    .section {
+      margin-bottom: 40px;
+    }
+
+    .subpoint {
+      margin-left: 25px;
+      color: #333;
+    }
+
     main p {
       font-size: 1.1rem;
       color: #222;
-      margin-bottom: 1.2rem;
+      margin-bottom: 1rem;
     }
 
     footer {
@@ -78,11 +87,20 @@
   </header>
 
   <main>
-    <p>Founding Account Executive of <strong>Build AI</strong></p>
-    <p>Owner of <strong>Perrin Hazelton LLC</strong></p>
-    <p>Achieved a seven-figure real estate valuation and served as an angel investor to <strong>Trubug</strong></p>
-    <p>Dominated residential solar panels with $4.3 million in revenue at <strong>Nivo Solar</strong></p>
-    <p>Consulting and training on YouTube with over 47k views</p>
+    <div class="section">
+      <p>Founding Account Executive of <strong>Build AI</strong></p>
+    </div>
+
+    <div class="section">
+      <p>Owner of <strong>Perrin Hazelton LLC</strong></p>
+      <p class="subpoint">• Achieved a seven-figure real estate valuation</p>
+      <p class="subpoint">• Angel invested in <strong>Trubug</strong></p>
+    </div>
+
+    <div class="section">
+      <p>Dominated residential solar panels in 2024 with $4.3 million in revenue at <strong>Nivo Solar</strong></p>
+      <p class="subpoint">• Consulting and training on YouTube with over 47k views</p>
+    </div>
   </main>
 
   <footer>
