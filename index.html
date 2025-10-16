@@ -4,64 +4,64 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Sean Hazelton</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600&display=swap" rel="stylesheet">
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
 
-    html, body {
-      width: 100%;
-      height: 100%;
-      overflow: hidden;
-      font-family: 'Inter Tight', -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Inter", "Helvetica Neue", sans-serif;
       background: #fff;
       color: #000;
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: center;
+      justify-content: flex-start;
+      min-height: 100vh;
+      padding: 80px 20px 60px;
+      line-height: 1.7;
+    }
+
+    header {
+      width: 100%;
+      max-width: 800px;
+      text-align: left;
+      margin-bottom: 60px;
+    }
+
+    header h1 {
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 600;
+      letter-spacing: -0.02em;
     }
 
     main {
-      text-align: center;
-      padding: 5vw;
-      max-width: 760px;
-    }
-
-    h1 {
-      font-size: clamp(2rem, 5vw, 3.2rem);
-      font-weight: 600;
-      letter-spacing: -0.02em;
-      margin-bottom: 1.5rem;
-    }
-
-    .bio {
-      margin-bottom: 2rem;
-      color: #222;
-      font-size: clamp(1rem, 2.5vw, 1.2rem);
+      max-width: 800px;
+      width: 100%;
+      text-align: left;
     }
 
     .section {
-      margin-bottom: 1.5rem;
-      font-size: clamp(0.95rem, 2.3vw, 1.05rem);
-      line-height: 1.6;
+      margin-bottom: 40px;
     }
 
     .subpoint {
-      margin-top: 0.3rem;
+      margin-left: 25px;
       color: #333;
-      font-weight: 400;
-      font-size: clamp(0.9rem, 2.2vw, 1rem);
+    }
+
+    main p {
+      font-size: 1.1rem;
+      color: #222;
+      margin-bottom: 1rem;
     }
 
     footer {
-      text-align: center;
-      font-size: clamp(0.85rem, 2vw, 0.95rem);
+      margin-top: auto;
+      padding-top: 40px;
+      text-align: left;
+      width: 100%;
+      max-width: 800px;
+      font-size: 0.95rem;
       color: #333;
-      margin-top: 2rem;
     }
 
     footer a {
@@ -76,66 +76,39 @@
     }
 
     footer span {
-      margin: 0 10px;
+      margin: 0 8px;
       color: #999;
-    }
-
-    /* Responsive layout: ensure content fits within viewport height */
-    .page-wrapper {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      width: 100%;
-      padding: 4vw;
-    }
-
-    @media (max-width: 600px) {
-      main {
-        padding: 6vw;
-      }
-
-      footer {
-        margin-top: 1.5rem;
-      }
     }
   </style>
 </head>
 <body>
-  <div class="page-wrapper">
-    <main>
-      <h1>Sean Hazelton</h1>
-      <p class="bio">Focused on growth, precision, and long-term value creation.</p>
+  <header>
+    <h1>Sean Hazelton</h1>
+  </header>
 
-      <div class="section">
-        <p>Owner of <strong>Perrin Hazelton LLC</strong></p>
-        <p class="subpoint">• Achieved a seven-figure real estate valuation in single and multi-family units</p>
-        <p class="subpoint">• Angel invested in <strong>Trubug</strong></p>
-      </div>
+  <main>
+    <div class="section">
+      <p>Founding Account Executive of <strong>Build AI</strong></p>
+    </div>
 
-      <div class="section">
-        <p>Dominated residential solar panels in 2024 with $4.3 million in revenue at <strong>Nivo Solar</strong></p>
-        <p class="subpoint">• Consulting and training on YouTube with over 47k views</p>
-      </div>
+    <div class="section">
+      <p>Owner of <strong>Perrin Hazelton LLC</strong></p>
+      <p class="subpoint">• Achieved a seven-figure real estate valuation</p>
+      <p class="subpoint">• Angel invested in <strong>Trubug</strong></p>
+    </div>
 
-      <div class="section">
-        <p>Then, I shut down my sales agency to become–</p>
-      </div>
+    <div class="section">
+      <p>Dominated residential solar panels in 2024 with $4.3 million in revenue at <strong>Nivo Solar</strong></p>
+      <p class="subpoint">• Consulting and training on YouTube with over 47k views</p>
+    </div>
+  </main>
 
-      <div class="section">
-        <p>Founding Account Executive of <strong>Build AI</strong></p>
-        <p class="subpoint">• We believe robots can learn from humans</p>
-      </div>
-
-      <footer>
-        <a href="https://www.linkedin.com/in/seanphazelton" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-        <span>|</span>
-        <a href="mailto:seanperrinhazelton@gmail.com">seanperrinhazelton@gmail.com</a>
-        <span>|</span>
-        <a href="mailto:sean@build.ai">sean@build.ai</a>
-      </footer>
-    </main>
-  </div>
+  <footer>
+    <a href="https://www.linkedin.com/in/seanphazelton" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+    <span>|</span>
+    <a href="mailto:seanperrinhazelton@gmail.com">seanperrinhazelton@gmail.com</a>
+    <span>|</span>
+    <a href="mailto:sean@build.ai">sean@build.ai</a>
+  </footer>
 </body>
 </html>
