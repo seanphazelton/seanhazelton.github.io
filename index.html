@@ -4,7 +4,6 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Sean Hazelton</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600&display=swap" rel="stylesheet">
   <style>
     * {
       margin: 0;
@@ -13,7 +12,7 @@
     }
 
     body {
-      font-family: 'Inter Tight', -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
+      font-family: -apple-system, BlinkMacSystemFont, "Inter", "Helvetica Neue", sans-serif;
       background: #ffffff;
       color: #000;
       line-height: 1.7;
@@ -34,7 +33,7 @@
     }
 
     h1 {
-      font-size: clamp(2rem, 4vw, 3.2rem);
+      font-size: clamp(2rem, 4vw, 3rem);
       font-weight: 600;
       letter-spacing: -0.02em;
       margin-bottom: 30px;
@@ -45,30 +44,24 @@
     }
 
     .bio {
-      margin-bottom: 70px;
+      margin-bottom: 60px;
       color: #222;
     }
 
     .section {
-      margin-bottom: 60px;
-    }
-
-    /* tighter relationship between main lines and subpoints */
-    .section > p:first-child {
-      margin-bottom: 0.4rem;
+      margin-bottom: 45px;
     }
 
     .subpoint {
-      margin-left: 26px;
+      margin-left: 24px;
       color: #333;
-      margin-top: 0.1rem;
-      margin-bottom: 0.2rem;
-      font-weight: 400;
+      margin-top: -0.3rem; /* pulls bullet points closer to main line */
+      margin-bottom: 0.4rem; /* smaller gap between bullets */
     }
 
     footer {
       margin-top: auto;
-      padding-top: 70px;
+      padding-top: 60px;
       width: 100%;
       max-width: 760px;
       text-align: left;
@@ -95,7 +88,7 @@
 </head>
 <body>
   <main>
-    <h1>Sean Hazelton</h1>
+    <h1>Hi, I'm Sean.</h1>
     <p class="bio">Focused on growth, precision, and long-term value creation.</p>
 
     <div class="section">
