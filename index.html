@@ -12,22 +12,28 @@
       color: #000;
       display: flex;
       flex-direction: column;
-      align-items: flex-start;
+      align-items: center;
       justify-content: flex-start;
       min-height: 100vh;
-      padding: 80px 20px 60px 80px;
+      padding: 80px 20px 60px 20px;
       line-height: 1.7;
     }
     @media (max-width: 768px) {
       body {
+        align-items: flex-start;
         padding: 60px 20px 40px 20px;
       }
     }
     header {
       width: 100%;
       max-width: 800px;
-      text-align: left;
+      text-align: center;
       margin-bottom: 20px;
+    }
+    @media (max-width: 768px) {
+      header {
+        text-align: left;
+      }
     }
     header h1 {
       font-size: clamp(3rem, 5vw, 4.5rem);
@@ -37,7 +43,12 @@
     main {
       max-width: 800px;
       width: 100%;
-      text-align: left;
+      text-align: center;
+    }
+    @media (max-width: 768px) {
+      main {
+        text-align: left;
+      }
     }
     .section {
       margin-bottom: 40px;
@@ -63,11 +74,16 @@
     footer {
       margin-top: auto;
       padding-top: 40px;
-      text-align: left;
+      text-align: center;
       width: 100%;
       max-width: 800px;
       font-size: 0.95rem;
       color: #333;
+    }
+    @media (max-width: 768px) {
+      footer {
+        text-align: left;
+      }
     }
     footer a {
       color: #000;
@@ -108,7 +124,7 @@
     </div>
     <div class="section">
       <p>Owner of <strong>Perrin Hazelton Equity</strong></p>
-      <p class="subpoint">• Built a seven-figure rental property real estate valuation in single and multi-family units</p>
+      <p class="subpoint">• Built a seven-figure real estate valuation in single and multi-family units</p>
       <p class="subpoint">• Angel invested in <strong>Trubug</strong></p>
     </div>
     <div class="section">
